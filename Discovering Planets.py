@@ -23,5 +23,5 @@ for i in range(cases): #go through the other lines
     elif float(line[3]) > 0.6 and float(line[0]) > 0:
         print("The planet's orbit is not ideal.")
 
-    if float(line[0]) < 100 and float(line[0]) > 0 and str(line[1]) == "true" and str(line[2]) == "true" and float(line[3]) < 0.6:
+    elif float(line[0]) < 100 and float(line[0]) > 0 and str(line[1]) == "true" and str(line[2]) == "true" and float(line[3]) < 0.6:
         print("The planet is habitable.")
