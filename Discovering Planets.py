@@ -32,5 +32,3 @@ for caseNum in range(cases):
     
     print("The planet is habitable.")
 
-    
-    print("The planet is habitable.")
