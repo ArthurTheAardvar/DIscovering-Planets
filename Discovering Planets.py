@@ -1,27 +1,36 @@
+import sys
+SEPARATOR = " "
 
+cases = int(sys.stdin.readline().rstrip())
 
-cases = int(input()) 
+for caseNum in range(cases):
+    line = sys.stdin.readline().rstrip()
 
-for i in range(cases): #go through the other lines
-    line = input()
-    
-    line = line.split(" ") #split up the line by spaces
-    
-    
-    if float(line[0]) > 100:
+	# replace this line as needed
+    args = [val for val in line.split(SEPARATOR)]
+
+    temp = float(args[0])
+    if temp > 100:
         print("The planet is too hot.")
-
-    elif float(line[0]) < 0:
+        continue
+    elif temp < 0:
         print("The planet is too cold.")
-
-    if str(line[1]) == "false" and float(line[3]) < 0.6:
+        continue
+    
+    if args[1] != "true":
         print("The planet has no water.")
+        continue
 
-    if str(line[2]) == "false":
+    if args[2] != "true":
         print("The planet has no magnetic field.")
+        continue
 
-    if float(line[3]) > 0.6 and float(line[0]) > 0:
+    ecc = float(args[3])
+    if ecc > 0.6:
         print("The planet's orbit is not ideal.")
+        continue
+    
+    print("The planet is habitable.")
 
     
     print("The planet is habitable.")
